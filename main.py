@@ -27,7 +27,7 @@ def main():
     )
     print(response.text)
 
-    if len(sys.argv) == 3 and sys.argv[2] == "--verbose":
+    if "--verbose" in sys.argv:
         print(f"User prompt: {user_prompt}")
         print(f"Prompt tokens: {response.usage_metadata.prompt_token_count}")
         print(f"Response tokens: {response.usage_metadata.candidates_token_count}")
