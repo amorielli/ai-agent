@@ -3,7 +3,7 @@ import os
 from google.genai import types
 
 
-def get_files_info(working_directory, directory=None):
+def get_files_info(working_directory, directory="."):
     try:
         path = os.path.abspath(working_directory)
         working_directory_contents = os.listdir(path)
